@@ -4,4 +4,4 @@
 # Copyright (c) 2020 - 2021,  Xilinx, Inc.
 # All rights reserved.
 #
-DEPS+=gcc-target mkimage depmod
+DEPS+=gcc-target mkimage depmod debhelper

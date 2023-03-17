@@ -250,7 +250,7 @@ $(PERFDEB): $(kernel_ImageBoot)
 	cp -r $(kernel_PACKAGEDIR)/perf/* $(PERFDIR); \
 	(cd $(PERFDIR) && sed -i debian/changelog -e "s/VERSION/$(KERNELRELEASE)/g" && sed -i debian/control -e "s/VERSION/$(KERNELRELEASE)/g"); \
 	(cd $(kernel_BUILDDIR) && $(KERNEL_CROSSOPTS) $(MAKE) $(MAKEOPTS) -C tools/ perf_install prefix=$(PERFDIR)/build); \
-	(cd $(PERFDIR) && dpkg-buildpackage -a $(ARCH) -uc -us ); \
+	(export C=$(CROSSNAME)gcc && export CC=$(CROSSNAME)gcc && cd $(PERFDIR) && dpkg-buildpackage -a $(ARCH) -uc -us ); \
 
 perf:$(PERFDEB)
 perf-clean:

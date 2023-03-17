@@ -54,7 +54,7 @@ openoffice.org:
 		then $(INSTALL_PACKAGE) $@; else echo "E: Missing $@"; exit 99; fi
 
 
-cvs quilt diff gcc fakeroot bison flex wget bc tar make sed bash patch gzip perl cpio python rsync file g++:
+cvs quilt diff gcc fakeroot bison flex wget bc tar make sed bash patch gzip perl cpio python rsync file g++ zip:
 	@#testing if $@ is installed - install it if the build stops here
 	@$@ --version > /dev/null 2>&1 || if [ -e $(OS_VER) ]; \
 		then $(INSTALL_PACKAGE) $@; else echo "E: Missing $@"; exit 99; fi
