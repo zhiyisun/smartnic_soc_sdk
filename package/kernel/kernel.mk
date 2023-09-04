@@ -24,8 +24,8 @@ endif
 ifdef SNIC_KERNEL_NXP
 kernel_REPO_GIT=y
 kernel_REPO:=https://source.codeaurora.org/external/qoriq/qoriq-components
-kernel_REPO_URL:=https://source.codeaurora.org/external/qoriq/qoriq-components/linux
-kernel_REPO_NAME=linux-nxp
+kernel_REPO_URL:=https://github.com/nxp-qoriq/linux
+kernel_REPO_NAME=linux
 
 kernel_VER:=$(QORIQ_TAG)
 kernel_CHECKOUT:=$(kernel_VER)
